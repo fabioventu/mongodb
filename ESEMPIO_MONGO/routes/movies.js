@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient; //Importo la libreria mongod
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    const uri = "mongodb+srv://fventurini:<password>@cluster0.zx7mf.mongodb.net/Cluster0?retryWrites=true&w=majority"
+    const uri = "mongodb+srv://fventurini:ciaociao@cluster0.zx7mf.mongodb.net/Cluster0?retryWrites=true&w=majority"
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     client.connect(err => {
         const collection = client.db("sample_mflix").collection("movies"); //Mi connetto alla collection movies
@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
 router.get('/movie_from_title/:title', function (req, res, next) {
     console.log(req.params); //Leggo i parametri passati all'url
     title = req.params.title;
-    const uri = "mongodb+srv://fventurini:<password>@cluster0.zx7mf.mongodb.net/Cluster0?retryWrites=true&w=majority"
+    const uri = "mongodb+srv://fventurini:ciaociao@cluster0.zx7mf.mongodb.net/Cluster0?retryWrites=true&w=majority"
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     client.connect(err => {
         const collection = client.db("sample_mflix").collection("movies"); //Mi connetto alla collection movies
